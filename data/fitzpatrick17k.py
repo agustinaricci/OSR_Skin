@@ -124,9 +124,9 @@ def get_equal_len_datasets(dataset1, dataset2):
 
 def get_fitzpartrick17k_datasets(train_transform, test_transform, known_classes=(0,1,2,5,6,7,8), open_set_classes=(3,4), seed=0):
 
-    fitzpatrick_train_dir = osp.join(fitzpartrick17k, 'train')
-    fitzpatrick_val_dir = osp.join(fitzpartrick17k, 'val')
-    fitzpatrick_test_dir = osp.join(fitzpartrick17k, 'test')
+    fitzpatrick_train_dir = osp.join(fitzpatrick17k_root, 'train')
+    fitzpatrick_val_dir = osp.join(fitzpatrick17k_root, 'val')
+    fitzpatrick_test_dir = osp.join(fitzpatrick17k_root, 'test')
 
     np.random.seed(seed)
     # Build train/val dataset and subsample known_classes
