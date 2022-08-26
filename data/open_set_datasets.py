@@ -21,7 +21,7 @@ For each dataset, define function which returns:
 get_dataset_funcs = {
     'kather2016': get_kather2016_datasets,
     'kather100k': get_kather100k_datasets,
-    'fitzpatrick17k': get_fitzpatrick_datasets,
+    'fitzpatrick17k': get_fitzpartrick17k_datasets,
 }
 
 def get_datasets(name, transform='default', image_size=150, seed=0, args=None, known_classes=None, open_set_classes=None):
