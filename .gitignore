@@ -1,0 +1,20 @@
+# Ignore python local caching files
+__pycache__
+**.idea
+# Ignore notebook checkpoints
+**.ipynb_checkpoints
+#**.ipynb
+# Vim files and python caches
+*~
+*.swp
+*.pyc
+
+*.zip
+
+data/kather2016
+data/kather100k
+data/F17k
+manuscript/
+manuscript_arXiv
+*.pth
+*.npz
