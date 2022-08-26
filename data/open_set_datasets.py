@@ -1,6 +1,7 @@
 from data.kather2016 import get_kather2016_datasets
 from data.kather100k import get_kather100k_datasets
 from data.fitzpatrick17k import get_fitzpartrick17k_datasets
+from data.objects import get_objects_datasets
 from data.open_set_splits.osr_splits import osr_splits
 from data.augmentations import get_transform
 # from config import osr_split_dir
@@ -22,6 +23,7 @@ get_dataset_funcs = {
     'kather2016': get_kather2016_datasets,
     'kather100k': get_kather100k_datasets,
     'fitzpatrick17k': get_fitzpartrick17k_datasets,
+    'objects':get_objects_datasets,
 }
 
 def get_datasets(name, transform='default', image_size=150, seed=0, args=None, known_classes=None, open_set_classes=None):
@@ -70,6 +72,12 @@ def get_class_splits(dataset, split_idx=0):
     elif dataset == 'fitzpatrick17k': # this one has nine classes
         known_classes = osr_splits[dataset][split_idx]
         open_set_classes = [x for x in range(9) if x not in known_classes]
+        print('training on known classes:', known_classes)
+        print('open set classes:', open_set_classes)
+
+    elif dataset == 'objects': # this one has three classes
+        known_classes = osr_splits[dataset][split_idx]
+        open_set_classes = [x for x in range(3) if x not in known_classes]
         print('training on known classes:', known_classes)
         print('open set classes:', open_set_classes)
 
