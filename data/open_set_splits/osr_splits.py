@@ -23,5 +23,12 @@ osr_splits = {
         #[                     7, 8], # S2 known: stroma and tumor
         #[               5 ,   7, 8], # S3 known: muscle, stroma and tumor
      ],
+
+    'objects': [
+        [0, 1  ], # Unknown classes:  03_FLOWERS
+        [0,   2], # Unknown classes:  02_ANIMALS
+        [  1,2], # Unknown classes:  03_FLOWERS
+
+     ],
 }
 
